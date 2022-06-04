@@ -1,0 +1,58 @@
+.container{
+    height: auto;
+    width: 100%;
+}
+.flex-r{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.flex-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading-skill-quiz{
+    color: blue;
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 45%;
+    margin-top: 13%;
+    height: 30px;
+}
+.question-block{
+    width: 100%;
+}
+.question-block p{
+    font-weight: 600;
+    color: black;
+}
+.timer-block p{
+    color: purple;
+    font-weight: 600;
+}
+.data-block{
+    margin-left: 20%;
+    width: 60%;
+    background: lightskyblue;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.questionText{
+    color: white;
+}
+.options{
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+    background-color: lightseagreen;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+}

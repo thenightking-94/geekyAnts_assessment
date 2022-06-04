@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect, useRef, useState} from 'react'
+import QuestionPage from '../src/Components/QuestionPage'
+import {questions,answers,options} from '../src/Constants/dataForQuiz'
 
 function App() {
+  const [pageResize, setPageReSize] = useState(0)
+  const numberOfRenders = useRef(0)
+
+
+  useEffect(()=>
+  {
+    window.addEventListener("resize",reRenderPage)
+    return ()=>{
+      window.removeEventListener("resize",reRenderPage)
+    }
+  },[])
+
+  const reRenderPage = () => {
+    setPageReSize(pageResize =>  pageResize + 1)
+  }
+
+  useEffect(()=>{
+   // console.log(numberOfRenders.current ++)
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <QuestionPage questions={questions} answers={answers} options={options} />
     </div>
   );
 }
